@@ -1,0 +1,479 @@
+Profile: 
+* members of Package_Core
+	 #ConductingEquipment
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = ConductingEquipment
+		 subClassOf = #Equipment
+		 belongsToCategory = #Package_Core
+	 #CurveData
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = CurveData
+		 subClassOf = #IdentifiedObject
+		 belongsToCategory = #Package_Core
+		 has Properties : 
+			CurveData.Curve
+				 label = Curve
+				 dataType = 
+				 range = #Curve
+				 multiplicity = M:1
+				 has Stereotypes : 
+					byreference
+					ofAggregate
+
+			CurveData.xvalue
+				 label = xvalue
+				 dataType = http://www.w3.org/2001/XMLSchema#float
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			CurveData.y1value
+				 label = y1value
+				 dataType = http://www.w3.org/2001/XMLSchema#float
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			CurveData.y2value
+				 label = y2value
+				 dataType = http://www.w3.org/2001/XMLSchema#float
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			CurveData.y3value
+				 label = y3value
+				 dataType = http://www.w3.org/2001/XMLSchema#float
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+	 #CurveStyle
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = CurveStyle
+		 Enumeration class
+		 subClassOf = 
+		 belongsToCategory = #Package_Core
+			 has enum members : 
+				CurveStyle.constantYValue
+				CurveStyle.formula
+				CurveStyle.rampYValue
+				CurveStyle.straightLineYValues
+	 #IrregularTimePoint
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = IrregularTimePoint
+		 subClassOf = #IdentifiedObject
+		 belongsToCategory = #Package_Core
+		 has Properties : 
+			IrregularTimePoint.IntervalSchedule
+				 label = IntervalSchedule
+				 dataType = 
+				 range = #IrregularIntervalSchedule
+				 multiplicity = M:1
+				 has Stereotypes : 
+					byreference
+					ofAggregate
+
+			IrregularTimePoint.time
+				 label = time
+				 dataType = float
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			IrregularTimePoint.value1
+				 label = value1
+				 dataType = http://www.w3.org/2001/XMLSchema#float
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			IrregularTimePoint.value2
+				 label = value2
+				 dataType = http://www.w3.org/2001/XMLSchema#float
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+* members of Package_Domain
+	 #UnitMultiplier
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = UnitMultiplier
+		 Enumeration class
+		 subClassOf = 
+		 belongsToCategory = #Package_Domain
+			 has enum members : 
+				UnitMultiplier.c
+				UnitMultiplier.d
+				UnitMultiplier.G
+				UnitMultiplier.k
+				UnitMultiplier.m
+				UnitMultiplier.M
+				UnitMultiplier.micro
+				UnitMultiplier.n
+				UnitMultiplier.none
+				UnitMultiplier.p
+				UnitMultiplier.T
+	 #UnitSymbol
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = UnitSymbol
+		 Enumeration class
+		 subClassOf = 
+		 belongsToCategory = #Package_Domain
+			 has enum members : 
+				UnitSymbol.A
+				UnitSymbol.deg
+				UnitSymbol.degC
+				UnitSymbol.F
+				UnitSymbol.g
+				UnitSymbol.h
+				UnitSymbol.H
+				UnitSymbol.Hz
+				UnitSymbol.J
+				UnitSymbol.m
+				UnitSymbol.m2
+				UnitSymbol.m3
+				UnitSymbol.min
+				UnitSymbol.N
+				UnitSymbol.none
+				UnitSymbol.ohm
+				UnitSymbol.Pa
+				UnitSymbol.rad
+				UnitSymbol.s
+				UnitSymbol.S
+				UnitSymbol.V
+				UnitSymbol.VA
+				UnitSymbol.VAh
+				UnitSymbol.VAr
+				UnitSymbol.VArh
+				UnitSymbol.W
+				UnitSymbol.Wh
+* members of Package_IEC61970
+* members of Package_IES_Projects
+	 #BasicIntervalSchedule
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = BasicIntervalSchedule
+		 subClassOf = #IdentifiedObject
+		 belongsToCategory = #Package_IES_Projects
+		 has Properties : 
+			BasicIntervalSchedule.startTime
+				 label = startTime
+				 dataType = http://www.w3.org/2001/XMLSchema#dateTime
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			BasicIntervalSchedule.value1Multiplier
+				 label = value1Multiplier
+				 dataType = 
+				 range = #UnitMultiplier
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			BasicIntervalSchedule.value1Unit
+				 label = value1Unit
+				 dataType = 
+				 range = #UnitSymbol
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			BasicIntervalSchedule.value2Multiplier
+				 label = value2Multiplier
+				 dataType = 
+				 range = #UnitMultiplier
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			BasicIntervalSchedule.value2Unit
+				 label = value2Unit
+				 dataType = 
+				 range = #UnitSymbol
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+	 #Curve
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = Curve
+		 subClassOf = #IdentifiedObject
+		 belongsToCategory = #Package_IES_Projects
+		 has Properties : 
+			Curve.curveStyle
+				 label = curveStyle
+				 dataType = 
+				 range = #CurveStyle
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Curve.xMultiplier
+				 label = xMultiplier
+				 dataType = 
+				 range = #UnitMultiplier
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Curve.xUnit
+				 label = xUnit
+				 dataType = 
+				 range = #UnitSymbol
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Curve.y1Multiplier
+				 label = y1Multiplier
+				 dataType = 
+				 range = #UnitMultiplier
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Curve.y1Unit
+				 label = y1Unit
+				 dataType = 
+				 range = #UnitSymbol
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Curve.y2Multiplier
+				 label = y2Multiplier
+				 dataType = 
+				 range = #UnitMultiplier
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Curve.y2Unit
+				 label = y2Unit
+				 dataType = 
+				 range = #UnitSymbol
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Curve.y3Multiplier
+				 label = y3Multiplier
+				 dataType = 
+				 range = #UnitMultiplier
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Curve.y3Unit
+				 label = y3Unit
+				 dataType = 
+				 range = #UnitSymbol
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+	 #Equipment
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = Equipment
+		 subClassOf = #PowerSystemResource
+		 belongsToCategory = #Package_IES_Projects
+		 has Properties : 
+			Equipment.aggregate
+				 label = aggregate
+				 dataType = http://www.w3.org/2001/XMLSchema#boolean
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Equipment.normallyInService
+				 label = normallyInService
+				 dataType = http://www.w3.org/2001/XMLSchema#boolean
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+	 #IdentifiedObject
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = IdentifiedObject
+		 subClassOf = 
+		 belongsToCategory = #Package_IES_Projects
+		 has Properties : 
+			IdentifiedObject.aliasName
+				 label = aliasName
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			IdentifiedObject.mRID
+				 label = mRID
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:1
+				 has Stereotypes : 
+					attribute
+
+			IdentifiedObject.name
+				 label = name
+				 dataType = http://www.w3.org/2001/XMLSchema#string
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+	 #IrregularIntervalSchedule
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = IrregularIntervalSchedule
+		 subClassOf = #BasicIntervalSchedule
+		 belongsToCategory = #Package_IES_Projects
+	 #OutageSchedule
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = OutageSchedule
+		 subClassOf = #IrregularIntervalSchedule
+		 belongsToCategory = #Package_IES_Projects
+	 #PowerSystemResource
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = PowerSystemResource
+		 subClassOf = #IdentifiedObject
+		 belongsToCategory = #Package_IES_Projects
+		 has Properties : 
+			PowerSystemResource.OutageSchedule
+				 label = OutageSchedule
+				 dataType = 
+				 range = #OutageSchedule
+				 multiplicity = M:1
+				 has Stereotypes : 
+					byreference
+
+	 #ProtectedSwitch
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = ProtectedSwitch
+		 subClassOf = #Switch
+		 belongsToCategory = #Package_IES_Projects
+	 #RegularIntervalSchedule
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = RegularIntervalSchedule
+		 subClassOf = #BasicIntervalSchedule
+		 belongsToCategory = #Package_IES_Projects
+		 has Properties : 
+			RegularIntervalSchedule.endTime
+				 label = endTime
+				 dataType = http://www.w3.org/2001/XMLSchema#dateTime
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			RegularIntervalSchedule.timeStep
+				 label = timeStep
+				 dataType = float
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+	 #RegularTimePoint
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = RegularTimePoint
+		 subClassOf = #IdentifiedObject
+		 belongsToCategory = #Package_IES_Projects
+		 has Properties : 
+			RegularTimePoint.IntervalSchedule
+				 label = IntervalSchedule
+				 dataType = 
+				 range = #RegularIntervalSchedule
+				 multiplicity = M:1
+				 has Stereotypes : 
+					byreference
+					ofAggregate
+
+			RegularTimePoint.sequenceNumber
+				 label = sequenceNumber
+				 dataType = http://www.w3.org/2001/XMLSchema#integer
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			RegularTimePoint.value1
+				 label = value1
+				 dataType = http://www.w3.org/2001/XMLSchema#float
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			RegularTimePoint.value2
+				 label = value2
+				 dataType = http://www.w3.org/2001/XMLSchema#float
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+* members of Package_TC57CIM
+* members of Package_Wires
+	 #Disconnector
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = Disconnector
+		 subClassOf = #Switch
+		 belongsToCategory = #Package_Wires
+	 #Switch
+		 type = http://www.w3.org/2000/01/rdf-schema#Class
+		 label = Switch
+		 subClassOf = #ConductingEquipment
+		 belongsToCategory = #Package_Wires
+		 has Properties : 
+			Switch.normalOpen
+				 label = normalOpen
+				 dataType = http://www.w3.org/2001/XMLSchema#boolean
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Switch.ratedCurrent
+				 label = ratedCurrent
+				 dataType = float
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Switch.retained
+				 label = retained
+				 dataType = http://www.w3.org/2001/XMLSchema#boolean
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Switch.switchOnCount
+				 label = switchOnCount
+				 dataType = http://www.w3.org/2001/XMLSchema#integer
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+			Switch.switchOnDate
+				 label = switchOnDate
+				 dataType = http://www.w3.org/2001/XMLSchema#dateTime
+				 range = 
+				 multiplicity = M:0..1
+				 has Stereotypes : 
+					attribute
+
+

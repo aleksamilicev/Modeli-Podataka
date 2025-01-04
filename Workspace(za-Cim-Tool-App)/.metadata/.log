@@ -1,0 +1,707 @@
+!SESSION 2025-01-03 17:40:53.552 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=20.0.2
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY net.sourceforge.plantuml.jdt 4 0 2025-01-03 17:41:09.204
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: net.sourceforge.plantuml.jdt [26]
+  Unresolved requirement: Import-Package: org.eclipse.jdt.core
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.equinox.http.jetty 4 0 2025-01-03 17:41:10.343
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.equinox.http.jetty [104]
+  Unresolved requirement: Import-Package: org.eclipse.jetty.server; version="[10.0.2,11.0.0)"
+    -> Export-Package: org.eclipse.jetty.server; bundle-symbolic-name="org.eclipse.jetty.server"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.net.ssl,javax.security.auth,javax.servlet,javax.servlet.http,org.eclipse.jetty.http,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.io,org.eclipse.jetty.io.ssl,org.eclipse.jetty.server.handler,org.eclipse.jetty.server.session,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+       org.eclipse.jetty.server [132]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="2.0.16"; uses:="org.slf4j.event,org.slf4j.helpers,org.slf4j.spi"
+              slf4j.api [211]
+                Unresolved requirement: Require-Capability: osgi.serviceloader; osgi.serviceloader="org.slf4j.spi.SLF4JServiceProvider"; filter:="(osgi.serviceloader=org.slf4j.spi.SLF4JServiceProvider)"
+                Unresolved requirement: Require-Capability: osgi.extender; filter:="(&(osgi.extender=osgi.serviceloader.processor)(version>=1.0.0)(!(version>=2.0.0)))"
+                  -> Provide-Capability: osgi.extender; osgi.extender="osgi.serviceloader.processor"; version:Version="1.0.0"
+                     org.eclipse.wst.server.preview [177]
+                       Unresolved requirement: Require-Bundle: org.eclipse.jetty.http; bundle-version="[10.0.1,11.0.0)"
+                         -> Bundle-SymbolicName: org.eclipse.jetty.http; bundle-version="10.0.15"
+                            org.eclipse.jetty.http [127]
+                              Unresolved requirement: Import-Package: org.eclipse.jetty.util; version="[10.0.15,11.0.0)"
+                                -> Export-Package: org.eclipse.jetty.util; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.thread,org.slf4j"
+                                   org.eclipse.jetty.util [134]
+                                     Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                                       -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="2.0.16"; uses:="org.slf4j.event,org.slf4j.helpers,org.slf4j.spi"
+                              Unresolved requirement: Import-Package: org.eclipse.jetty.io; version="[10.0.15,11.0.0)"
+                                -> Export-Package: org.eclipse.jetty.io; bundle-symbolic-name="org.eclipse.jetty.io"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.net.ssl,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+                                   org.eclipse.jetty.io [128]
+                                     Unresolved requirement: Import-Package: org.eclipse.jetty.jmx; version="[10.0.15,11.0.0)"; resolution:="optional"
+                                     Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                                       -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="2.0.16"; uses:="org.slf4j.event,org.slf4j.helpers,org.slf4j.spi"
+                                     Unresolved requirement: Import-Package: org.eclipse.jetty.util; version="[10.0.15,11.0.0)"
+                                       -> Export-Package: org.eclipse.jetty.util; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.thread,org.slf4j"
+                                     Unresolved requirement: Import-Package: org.eclipse.jetty.util.annotation; version="[10.0.15,11.0.0)"
+                                       -> Export-Package: org.eclipse.jetty.util.annotation; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"
+                              Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                                -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="2.0.16"; uses:="org.slf4j.event,org.slf4j.helpers,org.slf4j.spi"
+                       Unresolved requirement: Require-Bundle: org.eclipse.jetty.io; bundle-version="[10.0.1,11.0.0)"
+                         -> Bundle-SymbolicName: org.eclipse.jetty.io; bundle-version="10.0.15"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.http; version="[10.0.2,11.0.0)"
+    -> Export-Package: org.eclipse.jetty.http; bundle-symbolic-name="org.eclipse.jetty.http"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.io,org.eclipse.jetty.util,org.eclipse.jetty.util.component,org.eclipse.jetty.util.compression,org.eclipse.jetty.util.resource,org.slf4j"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.server.handler; version="[10.0.2,11.0.0)"
+    -> Export-Package: org.eclipse.jetty.server.handler; bundle-symbolic-name="org.eclipse.jetty.server"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.servlet,javax.servlet.descriptor,javax.servlet.http,org.eclipse.jetty.http,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.io,org.eclipse.jetty.server,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.slf4j"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.server.preview 4 0 2025-01-03 17:41:10.370
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.server.preview [177]
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.http; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.http; bundle-version="10.0.15"
+       org.eclipse.jetty.http [127]
+         Unresolved requirement: Import-Package: org.eclipse.jetty.io; version="[10.0.15,11.0.0)"
+           -> Export-Package: org.eclipse.jetty.io; bundle-symbolic-name="org.eclipse.jetty.io"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.net.ssl,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+              org.eclipse.jetty.io [128]
+                Unresolved requirement: Import-Package: org.eclipse.jetty.jmx; version="[10.0.15,11.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                  -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="2.0.16"; uses:="org.slf4j.event,org.slf4j.helpers,org.slf4j.spi"
+                     slf4j.api [211]
+                       Unresolved requirement: Require-Capability: osgi.serviceloader; osgi.serviceloader="org.slf4j.spi.SLF4JServiceProvider"; filter:="(osgi.serviceloader=org.slf4j.spi.SLF4JServiceProvider)"
+                       Unresolved requirement: Require-Capability: osgi.extender; filter:="(&(osgi.extender=osgi.serviceloader.processor)(version>=1.0.0)(!(version>=2.0.0)))"
+                         -> Provide-Capability: osgi.extender; osgi.extender="osgi.serviceloader.processor"; version:Version="1.0.0"
+                Unresolved requirement: Import-Package: org.eclipse.jetty.util; version="[10.0.15,11.0.0)"
+                  -> Export-Package: org.eclipse.jetty.util; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.thread,org.slf4j"
+                     org.eclipse.jetty.util [134]
+                       Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                         -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="2.0.16"; uses:="org.slf4j.event,org.slf4j.helpers,org.slf4j.spi"
+                Unresolved requirement: Import-Package: org.eclipse.jetty.util.annotation; version="[10.0.15,11.0.0)"
+                  -> Export-Package: org.eclipse.jetty.util.annotation; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="2.0.16"; uses:="org.slf4j.event,org.slf4j.helpers,org.slf4j.spi"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.security; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.security; bundle-version="10.0.15"
+       org.eclipse.jetty.security [131]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="2.0.16"; uses:="org.slf4j.event,org.slf4j.helpers,org.slf4j.spi"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.io; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.io; bundle-version="10.0.15"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.server; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.server; bundle-version="10.0.15"
+       org.eclipse.jetty.server [132]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="2.0.16"; uses:="org.slf4j.event,org.slf4j.helpers,org.slf4j.spi"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.servlet; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.servlet; bundle-version="10.0.15"
+       org.eclipse.jetty.servlet [133]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="2.0.16"; uses:="org.slf4j.event,org.slf4j.helpers,org.slf4j.spi"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.util; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.util; bundle-version="10.0.15"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.e4.ui.css.swt.theme 4 0 2025-01-03 17:48:27.080
+!MESSAGE /css/gef_dark.css
+!STACK 0
+java.io.FileNotFoundException: /css/gef_dark.css
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:55)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:182)
+	at java.base/java.net.URL.openConnection(URL.java:1250)
+	at org.eclipse.osgi.storage.url.BundleURLConverter.resolve(BundleURLConverter.java:55)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:288)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.resolve(PlatformURLConverter.java:53)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:288)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:468)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:436)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:428)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.restore(ThemeEngine.java:624)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.setCSSTheme(PartRenderingEngine.java:1417)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.initializeStyling(PartRenderingEngine.java:1324)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1050)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SESSION 2025-01-03 17:53:11.708 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=20.0.2
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY net.sourceforge.plantuml.jdt 4 0 2025-01-03 17:53:12.573
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: net.sourceforge.plantuml.jdt [26]
+  Unresolved requirement: Import-Package: org.eclipse.jdt.core
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.equinox.http.jetty 4 0 2025-01-03 17:53:13.411
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.equinox.http.jetty [104]
+  Unresolved requirement: Import-Package: org.eclipse.jetty.http; version="[10.0.2,11.0.0)"
+    -> Export-Package: org.eclipse.jetty.http; bundle-symbolic-name="org.eclipse.jetty.http"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.io,org.eclipse.jetty.util,org.eclipse.jetty.util.component,org.eclipse.jetty.util.compression,org.eclipse.jetty.util.resource,org.slf4j"
+       org.eclipse.jetty.http [127]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+              slf4j.api [211]
+                Unresolved requirement: Require-Capability: osgi.serviceloader; osgi.serviceloader="org.slf4j.spi.SLF4JServiceProvider"; filter:="(osgi.serviceloader=org.slf4j.spi.SLF4JServiceProvider)"
+                Unresolved requirement: Require-Capability: osgi.extender; filter:="(&(osgi.extender=osgi.serviceloader.processor)(version>=1.0.0)(!(version>=2.0.0)))"
+                  -> Provide-Capability: osgi.extender; osgi.extender="osgi.serviceloader.processor"; version:Version="1.0.0"
+                     org.eclipse.wst.server.preview [177]
+                       Unresolved requirement: Require-Bundle: org.eclipse.jetty.http; bundle-version="[10.0.1,11.0.0)"
+                         -> Bundle-SymbolicName: org.eclipse.jetty.http; bundle-version="10.0.15"
+                       Unresolved requirement: Require-Bundle: org.eclipse.jetty.io; bundle-version="[10.0.1,11.0.0)"
+                         -> Bundle-SymbolicName: org.eclipse.jetty.io; bundle-version="10.0.15"
+                            org.eclipse.jetty.io [128]
+                              Unresolved requirement: Import-Package: org.eclipse.jetty.jmx; version="[10.0.15,11.0.0)"; resolution:="optional"
+                              Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                                -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+                              Unresolved requirement: Import-Package: org.eclipse.jetty.util.annotation; version="[10.0.15,11.0.0)"
+                                -> Export-Package: org.eclipse.jetty.util.annotation; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"
+                                   org.eclipse.jetty.util [134]
+                                     Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                                       -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+                              Unresolved requirement: Import-Package: org.eclipse.jetty.util; version="[10.0.15,11.0.0)"
+                                -> Export-Package: org.eclipse.jetty.util; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.thread,org.slf4j"
+         Unresolved requirement: Import-Package: org.eclipse.jetty.io; version="[10.0.15,11.0.0)"
+           -> Export-Package: org.eclipse.jetty.io; bundle-symbolic-name="org.eclipse.jetty.io"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.net.ssl,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+         Unresolved requirement: Import-Package: org.eclipse.jetty.util; version="[10.0.15,11.0.0)"
+           -> Export-Package: org.eclipse.jetty.util; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.thread,org.slf4j"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.server; version="[10.0.2,11.0.0)"
+    -> Export-Package: org.eclipse.jetty.server; bundle-symbolic-name="org.eclipse.jetty.server"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.net.ssl,javax.security.auth,javax.servlet,javax.servlet.http,org.eclipse.jetty.http,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.io,org.eclipse.jetty.io.ssl,org.eclipse.jetty.server.handler,org.eclipse.jetty.server.session,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+       org.eclipse.jetty.server [132]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.server.handler; version="[10.0.2,11.0.0)"
+    -> Export-Package: org.eclipse.jetty.server.handler; bundle-symbolic-name="org.eclipse.jetty.server"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.servlet,javax.servlet.descriptor,javax.servlet.http,org.eclipse.jetty.http,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.io,org.eclipse.jetty.server,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.slf4j"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.server.preview 4 0 2025-01-03 17:53:13.437
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.server.preview [177]
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.security; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.security; bundle-version="10.0.15"
+       org.eclipse.jetty.security [131]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+              slf4j.api [211]
+                Unresolved requirement: Require-Capability: osgi.serviceloader; osgi.serviceloader="org.slf4j.spi.SLF4JServiceProvider"; filter:="(osgi.serviceloader=org.slf4j.spi.SLF4JServiceProvider)"
+                Unresolved requirement: Require-Capability: osgi.extender; filter:="(&(osgi.extender=osgi.serviceloader.processor)(version>=1.0.0)(!(version>=2.0.0)))"
+                  -> Provide-Capability: osgi.extender; osgi.extender="osgi.serviceloader.processor"; version:Version="1.0.0"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.util; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.util; bundle-version="10.0.15"
+       org.eclipse.jetty.util [134]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.http; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.http; bundle-version="10.0.15"
+       org.eclipse.jetty.http [127]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+         Unresolved requirement: Import-Package: org.eclipse.jetty.io; version="[10.0.15,11.0.0)"
+           -> Export-Package: org.eclipse.jetty.io; bundle-symbolic-name="org.eclipse.jetty.io"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.net.ssl,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+              org.eclipse.jetty.io [128]
+                Unresolved requirement: Import-Package: org.eclipse.jetty.jmx; version="[10.0.15,11.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                  -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+                Unresolved requirement: Import-Package: org.eclipse.jetty.util.annotation; version="[10.0.15,11.0.0)"
+                  -> Export-Package: org.eclipse.jetty.util.annotation; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"
+                Unresolved requirement: Import-Package: org.eclipse.jetty.util; version="[10.0.15,11.0.0)"
+                  -> Export-Package: org.eclipse.jetty.util; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.thread,org.slf4j"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.io; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.io; bundle-version="10.0.15"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.server; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.server; bundle-version="10.0.15"
+       org.eclipse.jetty.server [132]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.servlet; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.servlet; bundle-version="10.0.15"
+       org.eclipse.jetty.servlet [133]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.e4.ui.css.swt.theme 4 0 2025-01-03 17:53:26.198
+!MESSAGE /css/gef_dark.css
+!STACK 0
+java.io.FileNotFoundException: /css/gef_dark.css
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:55)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:182)
+	at java.base/java.net.URL.openConnection(URL.java:1250)
+	at org.eclipse.osgi.storage.url.BundleURLConverter.resolve(BundleURLConverter.java:55)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:288)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.resolve(PlatformURLConverter.java:53)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:288)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:468)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:436)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:428)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.restore(ThemeEngine.java:624)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.setCSSTheme(PartRenderingEngine.java:1417)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.initializeStyling(PartRenderingEngine.java:1324)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1050)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.core.resources 4 2 2025-01-03 17:56:52.471
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.RuntimeException: org.eclipse.core.internal.resources.ResourceException: Project 'Vezbe2_modeli' is not open.
+	at au.com.langdale.cimtoole.project.Settings$ResourceListener.resourceChanged(Settings.java:170)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:307)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:297)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:160)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:388)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1516)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:50)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Project 'Vezbe2_modeli' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:153)
+	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:210)
+	at org.eclipse.core.internal.resources.Resource.getSessionProperty(Resource.java:1191)
+	at au.com.langdale.cimtoole.project.Settings.getSettingsStore(Settings.java:118)
+	at au.com.langdale.cimtoole.project.Settings$DeltaVisitor.removeSettings(Settings.java:220)
+	at au.com.langdale.cimtoole.project.Settings$DeltaVisitor.visit(Settings.java:203)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at au.com.langdale.cimtoole.project.Settings$ResourceListener.resourceChanged(Settings.java:168)
+	... 8 more
+Caused by: java.lang.Exception: Project 'Vezbe2_modeli' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 19 more
+!SESSION 2025-01-03 17:59:49.595 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=20.0.2
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY net.sourceforge.plantuml.jdt 4 0 2025-01-03 17:59:50.377
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: net.sourceforge.plantuml.jdt [26]
+  Unresolved requirement: Import-Package: org.eclipse.jdt.core
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.equinox.http.jetty 4 0 2025-01-03 17:59:51.183
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.equinox.http.jetty [104]
+  Unresolved requirement: Import-Package: org.eclipse.jetty.http; version="[10.0.2,11.0.0)"
+    -> Export-Package: org.eclipse.jetty.http; bundle-symbolic-name="org.eclipse.jetty.http"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.io,org.eclipse.jetty.util,org.eclipse.jetty.util.component,org.eclipse.jetty.util.compression,org.eclipse.jetty.util.resource,org.slf4j"
+       org.eclipse.jetty.http [127]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+              slf4j.api [211]
+                Unresolved requirement: Require-Capability: osgi.serviceloader; osgi.serviceloader="org.slf4j.spi.SLF4JServiceProvider"; filter:="(osgi.serviceloader=org.slf4j.spi.SLF4JServiceProvider)"
+                Unresolved requirement: Require-Capability: osgi.extender; filter:="(&(osgi.extender=osgi.serviceloader.processor)(version>=1.0.0)(!(version>=2.0.0)))"
+                  -> Provide-Capability: osgi.extender; osgi.extender="osgi.serviceloader.processor"; version:Version="1.0.0"
+                     org.eclipse.wst.server.preview [177]
+                       Unresolved requirement: Require-Bundle: org.eclipse.jetty.http; bundle-version="[10.0.1,11.0.0)"
+                         -> Bundle-SymbolicName: org.eclipse.jetty.http; bundle-version="10.0.15"
+                       Unresolved requirement: Require-Bundle: org.eclipse.jetty.io; bundle-version="[10.0.1,11.0.0)"
+                         -> Bundle-SymbolicName: org.eclipse.jetty.io; bundle-version="10.0.15"
+                            org.eclipse.jetty.io [128]
+                              Unresolved requirement: Import-Package: org.eclipse.jetty.jmx; version="[10.0.15,11.0.0)"; resolution:="optional"
+                              Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                                -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+                              Unresolved requirement: Import-Package: org.eclipse.jetty.util.annotation; version="[10.0.15,11.0.0)"
+                                -> Export-Package: org.eclipse.jetty.util.annotation; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"
+                                   org.eclipse.jetty.util [134]
+                                     Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                                       -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+                              Unresolved requirement: Import-Package: org.eclipse.jetty.util; version="[10.0.15,11.0.0)"
+                                -> Export-Package: org.eclipse.jetty.util; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.thread,org.slf4j"
+         Unresolved requirement: Import-Package: org.eclipse.jetty.io; version="[10.0.15,11.0.0)"
+           -> Export-Package: org.eclipse.jetty.io; bundle-symbolic-name="org.eclipse.jetty.io"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.net.ssl,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+         Unresolved requirement: Import-Package: org.eclipse.jetty.util; version="[10.0.15,11.0.0)"
+           -> Export-Package: org.eclipse.jetty.util; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.thread,org.slf4j"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.server; version="[10.0.2,11.0.0)"
+    -> Export-Package: org.eclipse.jetty.server; bundle-symbolic-name="org.eclipse.jetty.server"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.net.ssl,javax.security.auth,javax.servlet,javax.servlet.http,org.eclipse.jetty.http,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.io,org.eclipse.jetty.io.ssl,org.eclipse.jetty.server.handler,org.eclipse.jetty.server.session,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+       org.eclipse.jetty.server [132]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.server.handler; version="[10.0.2,11.0.0)"
+    -> Export-Package: org.eclipse.jetty.server.handler; bundle-symbolic-name="org.eclipse.jetty.server"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.servlet,javax.servlet.descriptor,javax.servlet.http,org.eclipse.jetty.http,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.io,org.eclipse.jetty.server,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.slf4j"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.server.preview 4 0 2025-01-03 17:59:51.200
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.server.preview [177]
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.security; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.security; bundle-version="10.0.15"
+       org.eclipse.jetty.security [131]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+              slf4j.api [211]
+                Unresolved requirement: Require-Capability: osgi.serviceloader; osgi.serviceloader="org.slf4j.spi.SLF4JServiceProvider"; filter:="(osgi.serviceloader=org.slf4j.spi.SLF4JServiceProvider)"
+                Unresolved requirement: Require-Capability: osgi.extender; filter:="(&(osgi.extender=osgi.serviceloader.processor)(version>=1.0.0)(!(version>=2.0.0)))"
+                  -> Provide-Capability: osgi.extender; osgi.extender="osgi.serviceloader.processor"; version:Version="1.0.0"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.util; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.util; bundle-version="10.0.15"
+       org.eclipse.jetty.util [134]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.http; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.http; bundle-version="10.0.15"
+       org.eclipse.jetty.http [127]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+         Unresolved requirement: Import-Package: org.eclipse.jetty.io; version="[10.0.15,11.0.0)"
+           -> Export-Package: org.eclipse.jetty.io; bundle-symbolic-name="org.eclipse.jetty.io"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.net.ssl,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+              org.eclipse.jetty.io [128]
+                Unresolved requirement: Import-Package: org.eclipse.jetty.jmx; version="[10.0.15,11.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                  -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+                Unresolved requirement: Import-Package: org.eclipse.jetty.util.annotation; version="[10.0.15,11.0.0)"
+                  -> Export-Package: org.eclipse.jetty.util.annotation; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"
+                Unresolved requirement: Import-Package: org.eclipse.jetty.util; version="[10.0.15,11.0.0)"
+                  -> Export-Package: org.eclipse.jetty.util; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.thread,org.slf4j"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.io; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.io; bundle-version="10.0.15"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.server; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.server; bundle-version="10.0.15"
+       org.eclipse.jetty.server [132]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.servlet; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.servlet; bundle-version="10.0.15"
+       org.eclipse.jetty.servlet [133]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.e4.ui.css.swt.theme 4 0 2025-01-03 17:59:56.443
+!MESSAGE /css/gef_dark.css
+!STACK 0
+java.io.FileNotFoundException: /css/gef_dark.css
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:55)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:182)
+	at java.base/java.net.URL.openConnection(URL.java:1250)
+	at org.eclipse.osgi.storage.url.BundleURLConverter.resolve(BundleURLConverter.java:55)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:288)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.resolve(PlatformURLConverter.java:53)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:288)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:468)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:436)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:428)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.restore(ThemeEngine.java:624)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.setCSSTheme(PartRenderingEngine.java:1417)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.initializeStyling(PartRenderingEngine.java:1324)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1050)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SESSION 2025-01-03 18:44:00.557 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=20.0.2
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY net.sourceforge.plantuml.jdt 4 0 2025-01-03 18:44:01.484
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: net.sourceforge.plantuml.jdt [26]
+  Unresolved requirement: Import-Package: org.eclipse.jdt.core
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.equinox.http.jetty 4 0 2025-01-03 18:44:02.357
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.equinox.http.jetty [104]
+  Unresolved requirement: Import-Package: org.eclipse.jetty.http; version="[10.0.2,11.0.0)"
+    -> Export-Package: org.eclipse.jetty.http; bundle-symbolic-name="org.eclipse.jetty.http"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.io,org.eclipse.jetty.util,org.eclipse.jetty.util.component,org.eclipse.jetty.util.compression,org.eclipse.jetty.util.resource,org.slf4j"
+       org.eclipse.jetty.http [127]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+              slf4j.api [211]
+                Unresolved requirement: Require-Capability: osgi.serviceloader; osgi.serviceloader="org.slf4j.spi.SLF4JServiceProvider"; filter:="(osgi.serviceloader=org.slf4j.spi.SLF4JServiceProvider)"
+                Unresolved requirement: Require-Capability: osgi.extender; filter:="(&(osgi.extender=osgi.serviceloader.processor)(version>=1.0.0)(!(version>=2.0.0)))"
+                  -> Provide-Capability: osgi.extender; osgi.extender="osgi.serviceloader.processor"; version:Version="1.0.0"
+                     org.eclipse.wst.server.preview [177]
+                       Unresolved requirement: Require-Bundle: org.eclipse.jetty.http; bundle-version="[10.0.1,11.0.0)"
+                         -> Bundle-SymbolicName: org.eclipse.jetty.http; bundle-version="10.0.15"
+                       Unresolved requirement: Require-Bundle: org.eclipse.jetty.io; bundle-version="[10.0.1,11.0.0)"
+                         -> Bundle-SymbolicName: org.eclipse.jetty.io; bundle-version="10.0.15"
+                            org.eclipse.jetty.io [128]
+                              Unresolved requirement: Import-Package: org.eclipse.jetty.jmx; version="[10.0.15,11.0.0)"; resolution:="optional"
+                              Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                                -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+                              Unresolved requirement: Import-Package: org.eclipse.jetty.util.annotation; version="[10.0.15,11.0.0)"
+                                -> Export-Package: org.eclipse.jetty.util.annotation; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"
+                                   org.eclipse.jetty.util [134]
+                                     Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                                       -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+                              Unresolved requirement: Import-Package: org.eclipse.jetty.util; version="[10.0.15,11.0.0)"
+                                -> Export-Package: org.eclipse.jetty.util; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.thread,org.slf4j"
+         Unresolved requirement: Import-Package: org.eclipse.jetty.io; version="[10.0.15,11.0.0)"
+           -> Export-Package: org.eclipse.jetty.io; bundle-symbolic-name="org.eclipse.jetty.io"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.net.ssl,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+         Unresolved requirement: Import-Package: org.eclipse.jetty.util; version="[10.0.15,11.0.0)"
+           -> Export-Package: org.eclipse.jetty.util; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.thread,org.slf4j"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.server; version="[10.0.2,11.0.0)"
+    -> Export-Package: org.eclipse.jetty.server; bundle-symbolic-name="org.eclipse.jetty.server"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.net.ssl,javax.security.auth,javax.servlet,javax.servlet.http,org.eclipse.jetty.http,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.io,org.eclipse.jetty.io.ssl,org.eclipse.jetty.server.handler,org.eclipse.jetty.server.session,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+       org.eclipse.jetty.server [132]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+  Unresolved requirement: Import-Package: org.eclipse.jetty.server.handler; version="[10.0.2,11.0.0)"
+    -> Export-Package: org.eclipse.jetty.server.handler; bundle-symbolic-name="org.eclipse.jetty.server"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.servlet,javax.servlet.descriptor,javax.servlet.http,org.eclipse.jetty.http,org.eclipse.jetty.http.pathmap,org.eclipse.jetty.io,org.eclipse.jetty.server,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.slf4j"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.server.preview 4 0 2025-01-03 18:44:02.384
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.server.preview [177]
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.security; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.security; bundle-version="10.0.15"
+       org.eclipse.jetty.security [131]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+              slf4j.api [211]
+                Unresolved requirement: Require-Capability: osgi.serviceloader; osgi.serviceloader="org.slf4j.spi.SLF4JServiceProvider"; filter:="(osgi.serviceloader=org.slf4j.spi.SLF4JServiceProvider)"
+                Unresolved requirement: Require-Capability: osgi.extender; filter:="(&(osgi.extender=osgi.serviceloader.processor)(version>=1.0.0)(!(version>=2.0.0)))"
+                  -> Provide-Capability: osgi.extender; osgi.extender="osgi.serviceloader.processor"; version:Version="1.0.0"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.util; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.util; bundle-version="10.0.15"
+       org.eclipse.jetty.util [134]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.http; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.http; bundle-version="10.0.15"
+       org.eclipse.jetty.http [127]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+         Unresolved requirement: Import-Package: org.eclipse.jetty.io; version="[10.0.15,11.0.0)"
+           -> Export-Package: org.eclipse.jetty.io; bundle-symbolic-name="org.eclipse.jetty.io"; bundle-version="10.0.15"; version="10.0.15"; uses:="javax.net.ssl,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.slf4j"
+              org.eclipse.jetty.io [128]
+                Unresolved requirement: Import-Package: org.eclipse.jetty.jmx; version="[10.0.15,11.0.0)"; resolution:="optional"
+                Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+                  -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+                Unresolved requirement: Import-Package: org.eclipse.jetty.util.annotation; version="[10.0.15,11.0.0)"
+                  -> Export-Package: org.eclipse.jetty.util.annotation; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"
+                Unresolved requirement: Import-Package: org.eclipse.jetty.util; version="[10.0.15,11.0.0)"
+                  -> Export-Package: org.eclipse.jetty.util; bundle-symbolic-name="org.eclipse.jetty.util"; bundle-version="10.0.15"; version="10.0.15"; uses:="org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.thread,org.slf4j"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.io; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.io; bundle-version="10.0.15"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.server; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.server; bundle-version="10.0.15"
+       org.eclipse.jetty.server [132]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+  Unresolved requirement: Require-Bundle: org.eclipse.jetty.servlet; bundle-version="[10.0.1,11.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.jetty.servlet; bundle-version="10.0.15"
+       org.eclipse.jetty.servlet [133]
+         Unresolved requirement: Import-Package: org.slf4j; version="[1.7.0,3.0.0)"
+           -> Export-Package: org.slf4j; bundle-symbolic-name="slf4j.api"; bundle-version="2.0.16"; version="1.7.36"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.e4.ui.css.swt.theme 4 0 2025-01-03 18:44:10.300
+!MESSAGE /css/gef_dark.css
+!STACK 0
+java.io.FileNotFoundException: /css/gef_dark.css
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:55)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:182)
+	at java.base/java.net.URL.openConnection(URL.java:1250)
+	at org.eclipse.osgi.storage.url.BundleURLConverter.resolve(BundleURLConverter.java:55)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:288)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.resolve(PlatformURLConverter.java:53)
+	at org.eclipse.core.runtime.FileLocator.resolve(FileLocator.java:288)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:468)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:436)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.setTheme(ThemeEngine.java:428)
+	at org.eclipse.e4.ui.css.swt.internal.theme.ThemeEngine.restore(ThemeEngine.java:624)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.setCSSTheme(PartRenderingEngine.java:1417)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.initializeStyling(PartRenderingEngine.java:1324)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1050)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
