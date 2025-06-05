@@ -1,0 +1,11 @@
+C:\Users\KORISNIK\Desktop\MP_79\Modeli-Podataka\ModelLabsProjekat\ModelLabs\LabModelLoader\bin\Debug\LabModelLoader.exe.config
+C:\Users\KORISNIK\Desktop\MP_79\Modeli-Podataka\ModelLabsProjekat\ModelLabs\LabModelLoader\bin\Debug\LabModelLoader.exe
+C:\Users\KORISNIK\Desktop\MP_79\Modeli-Podataka\ModelLabsProjekat\ModelLabs\LabModelLoader\bin\Debug\LabModelLoader.pdb
+C:\Users\KORISNIK\Desktop\MP_79\Modeli-Podataka\ModelLabsProjekat\ModelLabs\LabModelLoader\bin\Debug\FTN.Common.dll
+C:\Users\KORISNIK\Desktop\MP_79\Modeli-Podataka\ModelLabsProjekat\ModelLabs\LabModelLoader\bin\Debug\MP_79CIMProfile_Labs.dll
+C:\Users\KORISNIK\Desktop\MP_79\Modeli-Podataka\ModelLabsProjekat\ModelLabs\LabModelLoader\bin\Debug\FTN.Common.pdb
+C:\Users\KORISNIK\Desktop\MP_79\Modeli-Podataka\ModelLabsProjekat\ModelLabs\LabModelLoader\obj\Debug\LabModelLoader.csproj.AssemblyReference.cache
+C:\Users\KORISNIK\Desktop\MP_79\Modeli-Podataka\ModelLabsProjekat\ModelLabs\LabModelLoader\obj\Debug\LabModelLoader.csproj.CoreCompileInputs.cache
+C:\Users\KORISNIK\Desktop\MP_79\Modeli-Podataka\ModelLabsProjekat\ModelLabs\LabModelLoader\obj\Debug\LabModelLoader.csproj.CopyComplete
+C:\Users\KORISNIK\Desktop\MP_79\Modeli-Podataka\ModelLabsProjekat\ModelLabs\LabModelLoader\obj\Debug\LabModelLoader.exe
+C:\Users\KORISNIK\Desktop\MP_79\Modeli-Podataka\ModelLabsProjekat\ModelLabs\LabModelLoader\obj\Debug\LabModelLoader.pdb
