@@ -47,9 +47,6 @@ namespace LabModelLoader
             // Ako hoćeš sve CurveData koje pripadaju nekom Curve, moraš ih filtrirati na osnovu Curve reference, npr
             var thisCurveData = curveDataList.Where(cd => cd.Curve == curve).ToList();
 
-
-
-
             var disconnector = new Disconnector()
             {
                 MRID = Guid.NewGuid().ToString(),
@@ -93,7 +90,6 @@ namespace LabModelLoader
             // Ako želiš da znaš koje tačke pripadaju kom rasporedu, radiš isto kao i sa Curve
             var timePointsForThisSchedule = timePoints.Where(tp => tp.IntervalSchedule == irregularSchedule).ToList();
 
-
             RegularIntervalSchedule regularSchedule = new RegularIntervalSchedule
             {
                 MRID = Guid.NewGuid().ToString(),
@@ -118,11 +114,41 @@ namespace LabModelLoader
                 .Where(tp => tp.IntervalSchedule == regularSchedule)
                 .ToList();
 
-
             // v4.a 4.
             var model = LabModelLoader.GenerateModel();
 
             Console.WriteLine($"Ukupno ResourceDescription instanci: {model.Count}");
+
+            // ===== NOVO: Ispis broja entiteta svakog tipa =====
+            Console.WriteLine("\n=== Broj entiteta po tipovima ===");
+
+            var entityCounts = new Dictionary<string, int>();
+
+            foreach (var rd in model)
+            {
+                // Izvlačimo tip iz GID-a
+                short typeCode = ModelCodeHelper.ExtractTypeFromGlobalId(rd.Id);
+                DMSType entityType = (DMSType)typeCode;
+                string typeName = entityType.ToString();
+
+                if (entityCounts.ContainsKey(typeName))
+                {
+                    entityCounts[typeName]++;
+                }
+                else
+                {
+                    entityCounts[typeName] = 1;
+                }
+            }
+
+            // Sortiraj po imenu tipa za lepši ispis
+            foreach (var kvp in entityCounts.OrderBy(x => x.Key))
+            {
+                Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+            }
+
+            Console.WriteLine($"Ukupno različitih tipova: {entityCounts.Count}");
+            // ===== KRAJ NOVOG DELA =====
 
             foreach (var rd in model)
             {
@@ -134,6 +160,15 @@ namespace LabModelLoader
             string outputPath = "model_report_v4a5.txt";
             using (StreamWriter writer = new StreamWriter(outputPath))
             {
+                // Dodaj ispis broja entiteta i u fajl
+                writer.WriteLine("=== Broj entiteta po tipovima ===");
+                foreach (var kvp in entityCounts.OrderBy(x => x.Key))
+                {
+                    writer.WriteLine($"{kvp.Key}: {kvp.Value}");
+                }
+                writer.WriteLine($"Ukupno različitih tipova: {entityCounts.Count}");
+                writer.WriteLine("\n=== Detalji entiteta ===");
+
                 foreach (var rd in model)
                 {
                     string mRID = rd.GetProperty(ModelCode.IDOBJ_MRID)?.GetValue()?.ToString() ?? "N/A";
