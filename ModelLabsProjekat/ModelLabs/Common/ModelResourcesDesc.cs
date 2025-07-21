@@ -865,26 +865,27 @@ namespace FTN.Common
 		# region Initialization of metadata
 
 		private void InitializeTypeIdsInInsertOrder()
-		{			
-			typeIdsInInsertOrder.Add(ModelCode.BASEVOLTAGE);
-			typeIdsInInsertOrder.Add(ModelCode.LOCATION);
-			typeIdsInInsertOrder.Add(ModelCode.POWERTR);
-			typeIdsInInsertOrder.Add(ModelCode.POWERTRWINDING);
-			typeIdsInInsertOrder.Add(ModelCode.WINDINGTEST);			
+		{
+			typeIdsInInsertOrder.Add(ModelCode.BASIC_INTERVAL_SCHEDULE);
+			typeIdsInInsertOrder.Add(ModelCode.REGULAR_INTERVAL_SCHEDULE);
+			typeIdsInInsertOrder.Add(ModelCode.IRREGULAR_INTERVAL_SCHEDULE);
+			typeIdsInInsertOrder.Add(ModelCode.CURVE);
+			typeIdsInInsertOrder.Add(ModelCode.CURVE_DATA);
+			typeIdsInInsertOrder.Add(ModelCode.IRREGULAR_TIME_POINT);
+			typeIdsInInsertOrder.Add(ModelCode.REGULAR_TIME_POINT);
 		}
 
 		private void InitializeNotSettablePropertyIds()
 		{			
 			notSettablePropertyIds.Add(ModelCode.IDOBJ_GID);
-			notSettablePropertyIds.Add(ModelCode.BASEVOLTAGE_CONDEQS);
-			notSettablePropertyIds.Add(ModelCode.LOCATION_PSRS);
-			notSettablePropertyIds.Add(ModelCode.POWERTRWINDING_TESTS);
-            notSettablePropertyIds.Add(ModelCode.POWERTR_WINDINGS);	
+			notSettablePropertyIds.Add(ModelCode.CURVE_CURVEDATAS);
+			notSettablePropertyIds.Add(ModelCode.ITP_IRRINTSCHED);
+			notSettablePropertyIds.Add(ModelCode.RTP_REGINTSCHED);
 		}
-	
-		# endregion Initialization of metadata
 
-		# region Switching between enums and values
+		#endregion Initialization of metadata
+
+		#region Switching between enums and values
 
 		private List<ModelCode> SwitchLongsToModelCodes(List<long> longValues)
 		{

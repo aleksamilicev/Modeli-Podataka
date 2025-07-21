@@ -11,7 +11,9 @@ using FTN.Common;
 using FTN.Services.NetworkModelService.DataModel.Core;
 using FTN.Services.NetworkModelService.DataModel.Wires;
 using FTN.Services.NetworkModelService.DataModel;
-
+using FTN.Services.NetworkModelService.DataModel.Scheduling;
+using FTN.Services.NetworkModelService.DataModel.Curves;
+using FTN.Services.NetworkModelService.DataModel.Outage;
 
 namespace FTN.Services.NetworkModelService
 {		
@@ -119,37 +121,53 @@ namespace FTN.Services.NetworkModelService
 		{
 			short type = ModelCodeHelper.ExtractTypeFromGlobalId(globalId);
 
-			IdentifiedObject io = null;			
+			IdentifiedObject io = null;
 			switch ((DMSType)type)
 			{
-				case DMSType.BASEVOLTAGE:
-					io = new BaseVoltage(globalId);
+				case DMSType.CURVE:
+					io = new Curve(globalId);
 					break;
-
-				case DMSType.LOCATION:
-					io = new Location(globalId);
+				case DMSType.CURVE_DATA:
+					io = new CurveData(globalId);
 					break;
-				case DMSType.POWERTR:
-					io = new PowerTransformer(globalId);
+				case DMSType.BASIC_INTERVAL_SCHEDULE:
+					io = new BasicIntervalSchedule(globalId);
 					break;
-				case DMSType.POWERTRWINDING:
-					io = new TransformerWinding(globalId);
+				case DMSType.REGULAR_TIME_POINT:
+					io = new RegularTimePoint(globalId);
 					break;
-				case DMSType.WINDINGTEST:
-					io = new WindingTest(globalId);
-					break;			
-
-				default:					
-					string message = String.Format("Failed to create entity because specified type ({0}) is not supported.", type);
+				case DMSType.IRREGULAR_TIME_POINT:
+					io = new IrregularTimePoint(globalId);
+					break;
+				case DMSType.EQUIPMENT:
+					io = new Equipment(globalId);
+					break;
+				case DMSType.CONDUCTING_EQUIPMENT:
+					io = new ConductingEquipment_te(globalId);
+					break;
+				case DMSType.SWITCH:
+					io = new Switch(globalId);
+					break;
+				case DMSType.DISCONNECTOR:
+					io = new Disconnector(globalId);
+					break;
+				case DMSType.PROTECTED_SWITCH:
+					io = new ProtectedSwitch(globalId);
+					break;
+				case DMSType.OUTAGE_SCHEDULE:
+					io = new OutageSchedule(globalId);
+					break;
+				default:
+					string message = string.Format("Failed to create entity because specified type ({0}) is not supported.", type);
 					CommonTrace.WriteTrace(CommonTrace.TraceError, message);
-					throw new Exception(message);					
+					throw new Exception(message);
 			}
 
-            // Add entity to map
+			// Add entity to map
 			this.AddEntity(io);
 
 			return io;
-		}		
+		}
 
 		/// <summary>
 		/// Checks if entity exists in container.

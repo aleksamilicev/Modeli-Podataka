@@ -84,16 +84,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\BaseVoltage .cs" />
-    <Compile Include="Core\ConductingEquipment.cs" />
+    <Compile Include="Core\ConductingEquipment_te.cs" />
     <Compile Include="Core\Equipment.cs" />
-    <Compile Include="Core\Location.cs" />
     <Compile Include="Core\IdentifiedObject.cs" />
     <Compile Include="Core\PowerSystemResource.cs" />
+    <Compile Include="Curves\Curve.cs" />
+    <Compile Include="Curves\CurveData.cs" />
+    <Compile Include="Outage\IrregularIntervalSchedule.cs" />
+    <Compile Include="Outage\OutageSchedule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Wires\WindingTest.cs" />
-    <Compile Include="Wires\PowerTransformer.cs" />
-    <Compile Include="Wires\TransformerWinding.cs" />
+    <Compile Include="Scheduling\BasicIntervalSchedule.cs" />
+    <Compile Include="Scheduling\IrregularTimePoint.cs" />
+    <Compile Include="Scheduling\RegularIntervalSchedule.cs" />
+    <Compile Include="Scheduling\RegularTimePoint.cs" />
+    <Compile Include="Wires\Disconnector.cs" />
+    <Compile Include="Wires\ProtectedSwitch.cs" />
+    <Compile Include="Wires\Switch.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Common.csproj">
